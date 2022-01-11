@@ -78,39 +78,4 @@ configTest = createConfig(shards, '12')
 print('\n')
 print(configTest)
 
-"""
 
-def encryptShards(shardConfig):
-
-	currentKey = keyGen(shardIndex)
-	currentKeyAddr = str(shardIndex) + '.key'
-	keyFile = open(currentKeyAddr, 'rb')
-	currentKey = keyFile.read()
-	keyFile.close()
-
-	for shard in shardList:
-		shardIndex = str(shardList.index(shard))
-
-		jsonAddr = 'data/' + str(shardIndex) + '.json'
-		createCurrentJson = createJsonFunc(jsonAddr, shard)
-		print(createCurrentJson)
-
-
-
-
-		currentJsonAddr = str(shardIndex) + '.json'
-		with open(currentJsonAddr, 'rb') as f:
-			currentJson = f.read()
-
-		fernet = Fernet(currentKey)
-		encryptedJson = fernet.encrypt(currentJson)
-
-		encryptedJsonAddr = str(currentJsonAddr) + '.encrypted'
-
-		with open(encryptedJsonAddr, 'wb') as f:
-			f.write(encryptedJson)
-
-
-encryptShardTest = encryptShards(shards)
-
-"""
