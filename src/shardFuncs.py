@@ -3,7 +3,17 @@
 import cryptography
 from cryptography.fernet import Fernet
 import json
+import datetime
+from time import strftime, strptime
+import time
 
+
+
+# create time variables
+timeRn = datetime.datetime.now()
+dtRn = str(strftime("%x") + "_" + strftime("%X"))
+dtRn = dtRn.replace('/', '_')
+dtRn = dtRn.replace(':', '_')
 
 # export data to json
 def createJsonFunc(jsonOutAddr, jsonData):
@@ -63,7 +73,8 @@ def keyGen(keyName):
 	file.write(key)
 	file.close()
 	msg = '\nCreated key at: ' + str(keyAddr)
-	return msg
+	print(msg)
+	return keyAddr
 
 
 
