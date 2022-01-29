@@ -2,7 +2,6 @@
 
 from web3 import Web3
 import json
-#from web3.auto import w3
 
 
 print('\n')
@@ -33,11 +32,12 @@ EIP20_ABI = json.loads('[{"constant":true,"inputs":[],"name":"name","outputs":[{
 
 jb3 = web3.eth.contract(address=contractAddress, abi=EIP20_ABI)
 
+oneToken = 1000000000000000000
 
 # Build a transaction that invokes this contract's function, called transfer
 jb3_txn = jb3.functions.transfer(
 	account_2,
-	10000,
+	oneToken,
 	).buildTransaction({
 	'chainId': 3,
 	'gas': 100000,
@@ -68,10 +68,10 @@ try:
 	#send transaction
 	tx_hash = web3.eth.sendRawTransaction(signed_tx.rawTransaction)
 	#get transaction hash
+	print('\nSuccessfully sent transaction')
 	print(web3.toHex(tx_hash))
 
-	tx_receipt = web3.eth.getTransactionReceipt(tx_hash)
-	print(tx_receipt)
+
 
 except Exception as e:
 	print(e)
