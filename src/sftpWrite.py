@@ -5,9 +5,9 @@ from ftpCredz import *
 from shardFuncs import *
 
 
-theConfig = '_id__12_dt__02_06_22_18_52_30.config'
+#theConfig = '_id__12_dt__02_06_22_18_52_30.config'
 
-
+theConfig = '_id__12_dt__02_06_22_21_40_46.config'
 
 cnopts = pysftp.CnOpts()
 cnopts.hostkeys = None  
