@@ -11,6 +11,9 @@ from shardFuncs import *
 cnopts = pysftp.CnOpts()
 cnopts.hostkeys = None  
 
+# first do a check of what nodes are online, put those server names in list
+# loop through the 'files' list of each of those nodes to check if they are still hosting
+
 
 
 def checkNode(ftpServerName, shUser, masterMapInput):
