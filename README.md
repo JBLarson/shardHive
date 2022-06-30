@@ -1,6 +1,6 @@
 # shardHive
 
-colors
+
 dark-blue: #000099;
 light-blue: #D4E1F5;
 
