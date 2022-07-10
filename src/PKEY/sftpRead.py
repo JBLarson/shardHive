@@ -61,5 +61,5 @@ for cluster in clusterList:
 
 
 
-print('completed file transfer script')
+print('\ncompleted SFTP shard retrieval script\n')
 
