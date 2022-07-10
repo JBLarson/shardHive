@@ -1,8 +1,6 @@
 
 
-
 from shardFuncs import *
-
 
 
 def createMap(currentUserId):
@@ -11,7 +9,6 @@ def createMap(currentUserId):
 	for i in range(8):
 		currentKeyAddr = str(currentUserId) + '/' + str(i) + '.json.encrypted'
 		shardList.append(currentKeyAddr)
-
 
 	if len(shardList) == 8:
 		cluster0 = {'cluster': 0, 'server': 'pi0',
@@ -34,9 +31,7 @@ def createMap(currentUserId):
 				  			  	  7: shardList[7]},
 					'distributed': False}
 
-
 		clusterList = [cluster0, cluster1, cluster2, cluster3]
-
 
 	mapDict = {'userId': currentUserId, 'clusterList': clusterList}
 	return mapDict
@@ -50,24 +45,11 @@ except Exception as e:
 	print(e)
 
 
-
-
-
-
-
-
-
-
-
-
 def processCluster(clusterDict):
 
-
-	
 	proCluResults, newAddrMap = [], {}
 	currentServerName = clusterDict['server']
-	currentServer = secrets.servers[currentServerName]
-	
+	currentServer = secrets.servers[currentServerName]	
 
 	serverUser = currentServer['user']
 	clusterShardList = list(clusterDict['ogAddrMap'].values())
@@ -86,15 +68,16 @@ def processCluster(clusterDict):
 	return clusterDict
 
 
-
-
-
 clusterList = theMap['clusterList']
 updatedClusterList, currentUser = [], theUserId
 for cluster in clusterList:
-	distributedCluster = processCluster(cluster)
-	if distributedCluster not in updatedClusterList:
-		updatedClusterList.append(distributedCluster)
+	if cluster['server'] == 'pi0':	
+		distributedCluster = processCluster(cluster)
+		if distributedCluster not in updatedClusterList:
+			updatedClusterList.append(distributedCluster)
+
+	else:
+		updatedClusterList.append(cluster)
 
 
 updatedNetMapConfig = {'userId': theUserId, 'clusterList': updatedClusterList}
