@@ -1,7 +1,16 @@
 <?php
-$cookie_name = "nameTrackingCookie";
-$cookie_value = "fucking yert";
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+$cookie_name = "theName";
+$cookie_value = "jTest";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 1 day
+$cookie2_name = "userId";
+$cookie2_value = "12";
+setcookie($cookie2_name, $cookie2_value, time() + (86400 * 30), "/"); // 1 day
+$cookie3_name = "visitorId";
+date_default_timezone_set("America/New_York");
+$vidValue = "set_" . date("m_d_h_i_sa");
+$cookie3_value = $vidValue;
+setcookie($cookie3_name, $cookie3_value, time() + (86400 * 3000), "/"); // 100 days
+
 ?>
 <html lang="en">
   <head>
@@ -28,15 +37,22 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
     if(!isset($_COOKIE[$cookie_name])) {
       echo "<h2>Testing Cookie named '" . $cookie_name . "' is not set!</h2>";
     } else {
-      echo '<form action="/handleIt.php">';
+      echo '<form action="/handleLogin.php">';
         echo '<label for="name">Name</label>';
         echo '<input type="text" id="name" name="name" value="' . $_COOKIE[$cookie_name] . '">';
+        echo '<label for="userId">userId</label>';
+        echo '<input type="text" id="userId" name="userId" value="' . $_COOKIE[$cookie2_name] . '">';
+        echo '<label for="pass">pass</label>';
+        echo '<input type="text" id="pass" name="pass" value="">';
+        echo '<input type="submit" value="Submit">';
       echo '</form>';
-      echo "<h2>Cookie '" . $cookie_name . "' is set!<br></h2>";
-      echo "<h2>Value is: " . $_COOKIE[$cookie_name] . "</h2>";
+      /*echo "<h2>Cookie '" . $cookie_name . "' is set!<br></h2>";
+      echo "<h2>Value is: " . $_COOKIE[$cookie_name] . "</h2>";*/
+
     }
     ?>
-    <div>
+    <!--
+    div>
       <form action="/handleLogin.php">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Name">
@@ -60,6 +76,6 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
         <input type="submit" value="Submit">
       </form>
     </div>
-
+    -->
   </body>
 </html>
