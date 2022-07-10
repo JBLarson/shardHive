@@ -9,9 +9,7 @@ May combine sftpRead and processShards to prevent unencypted shards from being a
 
 ## Sharding Algorithm [shardPk.py](shardPk.py)
 
-## Map Local Shards to shardHive Network Nodes [createNetMap.py](createNetMap.py)
- 
-## Distribution Algorithm and Mechanism [sftpWrite.py](sftpWrite.py)
+## Map Shards to Network Nodes and Execute Distribution Algorithm [createNetMap.py](createNetMap.py)
  
 ## Retreival Mechanism [sftpRead.py](sftpRead.py)
  
