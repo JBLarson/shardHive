@@ -17,10 +17,15 @@
         <div class="grid-item1">
             <img src="https://shardhive.com/wp-content/uploads/2022/02/logoTransparent.svg" alt="shardHive Logo">
         </div>
-      
+      <div style="font-size: 1.5em;" >
+    
+        <a href="https://shardhive.com">shardHive.com</a>
+        <a href="https://io.shardhive.com/">IO landing page</a>
+        <a href="https://io.shardhive.com/login.php">login page</a>
+        <a href="https://io.shardhive.com/register.php">registration page</a>
+    
       </div>
-      <a href="https://io.shardhive.com/login.php">login page</a>
-
+      </div>
     </body>
 
 	<?php
@@ -43,7 +48,7 @@
   echo "Connected successfully<br>";
 
   /**/
-  $sql = "INSERT INTO `jTest` (`name`, `pass`, `userId`, `visitorId`) VALUES ('" . $_GET['name'] . "', '"  . $_GET['pass'] . "', '" . $_GET['userId'] . "', '" . $_COOKIE['visitorId'] . "')";
+  $sql = "INSERT INTO `jTest` (`username`, `pass`, `confirmPass`) VALUES ('" . $_GET['username'] . "', '"  . $_GET['pass'] . "', '"  . $_GET['confirmPass'] . "')";
 
 
   if ($conn->query($sql) === TRUE) {
