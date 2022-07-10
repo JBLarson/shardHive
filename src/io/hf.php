@@ -20,6 +20,16 @@
       
       </div>
 
+      <div style="font-size: 1.5em;" >
+    
+        <a href="https://shardhive.com">shardHive.com</a>
+        <a href="https://io.shardhive.com/">IO landing page</a>
+        <a href="https://io.shardhive.com/login.php">login page</a>
+        <a href="https://io.shardhive.com/register.php">registration page</a>
+    
+      </div>
+
+
     </body>
 
 	<?php
@@ -28,12 +38,18 @@
   $priceETH = 2112;
   $orderSize = $_GET['amount'];
   $orderCost = $orderSize * $priceETH;
-	echo '<h2>User: ' . $_GET['name'] . '</h2>';
+	echo '<h2>User: ' . $_GET['username'] . '</h2>';
   echo '<h3>Ordering: ' . $_GET['amount'] . '  ' . $_GET['currency'] . '</h3>';
   echo '<h3>Price of ETH: $' . $priceETH . '</h3>';
   echo '<h3>Cost: $' . $orderCost . '</h3>';
   echo '</div>';
 
+  $cookie1_name = "username";
+  $cookie1_value = $_GET['username'];
+  setcookie($cookie1_name, $cookie1_value, time() + (86400 * 3000), "/");
+  $cookie2_name = "loginDt";
+  $cookie2_value = date("m_d_h_i_sa");
+  setcookie($cookie2_name, $cookie2_value, time() + (86400 * 3000), "/");
 
 
   $servername = "ecngx279";
@@ -52,7 +68,7 @@
   echo "Connected successfully<br>";
 
 
-
+  /*
   $sql = "INSERT INTO `jTest` (`name`, `userId`, `ethAddr`, `currencyPref`) VALUES ('" . $_GET['name'] . "', '" . $_GET['amount'] . "', '', '" . $_GET['currency'] . "')";
 
 
@@ -61,18 +77,24 @@
   } else {
       echo 'error ' . $sql . '<br>' . $conn->error;
   }
-
-  $sql1 = "SELECT name, userId, currencyPref FROM jTest";
+  
+  $sql1 = "SELECT username, pass, confirmPass FROM jTest";
   $result = $conn->query($sql1);
   if ($result->num_rows > 0) {
       while($row = $result -> fetch_assoc()) {
-          echo "userId: " . $row["userId"] . " - Name: " . $row["name"] . "<br>";
+          $pass0=$row["pass"];
+          $pass1=$row["confirmPass"];
+          if($pass0 == $pass1){
+            echo "<h2>Success Creating Account for : " . $row["username"] . "</h2>"
+          } else{
+              echo "<h2>Try Again. Passwords do not match</h2>";
+          }
       }
   } else {
       echo "0 results";
   }
 
-
+  */
 
   $conn->close();
   ?>
