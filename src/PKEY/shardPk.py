@@ -92,12 +92,12 @@ theUserPk = pKeys['jTest']
 time = datetime.datetime.now()
 dtRn = str(strftime("%x") + " " + strftime("%X"))
 justTime, justDate = strftime("%X"), strftime("%x")
-print("\nExecuted First Sharding Script on: " + str(justDate) + " at: " + str(justTime) + "\n")
+print("\nExecuted Initial Sharding Script on: " + str(justDate) + " at: " + str(justTime) + "\n")
 
 
 shardPk = shardAndEncrypt(theUserId, theUserPk)
 
-print('\nshardAndEncrypt function output: ' + str(shardPk))
+#print('\nshardAndEncrypt function output: ' + str(shardPk))
 
 
 try:
