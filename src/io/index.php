@@ -21,13 +21,16 @@ $cookie1_name = "username";
 
 
 
-    <div style="font-size: 1.5em;" >
-    
-      <a href="https://shardhive.com">shardHive.com</a>
-      <a href="https://io.shardhive.com/">IO landing page</a>
-      <a href="https://io.shardhive.com/login.php">login page</a>
-      <a href="https://io.shardhive.com/register.php">registration page</a>
-    
+    <div class="ioHeaderMenu">
+        
+        <button class="button ioHeaderMenuObject" onclick="window.location.href='https://shardhive.com'">shardHive.com</button>
+
+        <button class="button ioHeaderMenuObject" onclick="window.location.href='https://io.shardhive.com/'">IO Landing</button>
+        
+        <button class="button ioHeaderMenuObject" onclick="window.location.href='https://io.shardhive.com/login.php'">IO Login</button>
+
+        <button class="button ioHeaderMenuObject" onclick="window.location.href='https://io.shardhive.com/register.php'"><a>IO Registration</a></button>
+
     </div>
 
 
