@@ -20,11 +20,8 @@ def decryptShard(encryptedFileAddr, encryptionKeyAddr):
 
 
 
-
-
 def decryptAndDelete(inputNetMap2):
 	inputConfig = readJson(inputNetMap2)
-
 
 	currentUserId = inputConfig['userId']
 	clusterList = inputConfig['clusterList']
@@ -76,33 +73,29 @@ def decryptAndDelete(inputNetMap2):
 		sortedValue = dItems[1]
 		ddOutput = ddOutput + str(sortedValue)
 
-
 	return ddOutput
-
-
-
-
 
 
 
 userNMap2 = str(theUserId) + '/netMap.json'
 dd = decryptAndDelete(userNMap2)
-print(dd)
-'''
-
-sortedDd = list((sorted(dd.items(), key=lambda x:x[0], reverse=False)))
-ddOutput = ''
-
-for dItems in sortedDd:
-	sortedValue = dItems[1]
-	ddOutput = ddOutput + str(sortedValue)
-'''
 
 
 try:
 	jsonOutAddr = str(theUserId) + '/pKey.json'
 	ddOutputSaved = writeJson(jsonOutAddr, dd)
-	print(ddOutputSaved)
+
 except Exception as e:
 	print('\nError saving pKey')
 	print(e)
+
+
+try:
+	jsonOutAddr = str(theUserId) + '/pKey.json'
+	chmodCommand = 'chmod 600 ' + str(jsonOutAddr)
+	os.system(chmodCommand)
+	print('\nSaved private key.\nSuccess restricting pKey permissions')
+except Exception as e:
+	print('\nError modifying pKey permissions')
+	print(e)
+
