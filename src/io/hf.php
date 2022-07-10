@@ -36,7 +36,6 @@
 
 
 
-  echo 'testing sql connection';
   $servername = "ecngx279";
   $username = "shardh5_jTest";
   $password = "tH3SqlTestP@55";
@@ -62,6 +61,17 @@
   } else {
       echo 'error ' . $sql . '<br>' . $conn->error;
   }
+
+  $sql1 = "SELECT name, userId, currencyPref FROM jTest";
+  $result = $conn->query($sql1);
+  if ($result->num_rows > 0) {
+      while($row = $result -> fetch_assoc()) {
+          echo "userId: " . $row["userId"] . " - Name: " . $row["name"] . "<br>";
+      }
+  } else {
+      echo "0 results";
+  }
+
 
 
   $conn->close();
