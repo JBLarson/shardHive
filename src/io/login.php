@@ -1,16 +1,10 @@
 <?php
-$cookie_name = "theName";
-$cookie_value = "jTest";
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 1 day
-$cookie2_name = "userId";
-$cookie2_value = "12";
-setcookie($cookie2_name, $cookie2_value, time() + (86400 * 30), "/"); // 1 day
-$cookie3_name = "visitorId";
+$cookie_name = "visitorId";
 date_default_timezone_set("America/New_York");
-$vidValue = "set_" . date("m_d_h_i_sa");
-$cookie3_value = $vidValue;
-setcookie($cookie3_name, $cookie3_value, time() + (86400 * 3000), "/"); // 100 days
-
+$vidValue = "vId_" . date("m_d_h_i_sa");
+$cookie_value = $vidValue;
+$cookie1_name = "username";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 3000), "/"); // 100 days
 ?>
 <html lang="en">
   <head>
@@ -32,18 +26,25 @@ setcookie($cookie3_name, $cookie3_value, time() + (86400 * 3000), "/"); // 100 d
 
     <h1>Test Login Form for PHP and SQL practice</h1>
     <br>
-    <div style="font-size: 1.5em; " ><a href="https://io.shardhive.com/login.php">login page</a></div>
+      <div style="font-size: 1.5em;" >
+    
+        <a href="https://shardhive.com">shardHive.com</a>
+        <a href="https://io.shardhive.com/">IO landing page</a>
+        <a href="https://io.shardhive.com/login.php">login page</a>
+        <a href="https://io.shardhive.com/register.php">registration page</a>
+    
+      </div>
     <?php
     if(!isset($_COOKIE[$cookie_name])) {
-      echo "<h2>Testing Cookie named '" . $cookie_name . "' is not set!</h2>";
+      echo "<h2>Visitor ID Cookie is not set!</h2>";
     } else {
       echo '<form action="/handleLogin.php">';
-        echo '<label for="name">Name</label>';
-        echo '<input type="text" id="name" name="name" value="' . $_COOKIE[$cookie_name] . '">';
-        echo '<label for="userId">userId</label>';
-        echo '<input type="text" id="userId" name="userId" value="' . $_COOKIE[$cookie2_name] . '">';
-        echo '<label for="pass">pass</label>';
-        echo '<input type="text" id="pass" name="pass" value="">';
+        echo '<label for="username">Username</label>';
+        echo '<input type="text" id="username" name="username" value="' . $_COOKIE[$cookie1_name] . '">';
+        echo '<label for="pass">Password</label>';
+        echo '<input type="text" id="pass" name="pass">';
+        echo '<label for="confirmPass">Confirm Password</label>';
+        echo '<input type="text" id="confirmPass" name="confirmPass" value="">';
         echo '<input type="submit" value="Submit">';
       echo '</form>';
       /*echo "<h2>Cookie '" . $cookie_name . "' is set!<br></h2>";
