@@ -11,7 +11,7 @@ import secrets
 import paramiko
 import pysftp
 import os
-
+#from main import setTheUserId
 
 # create time variables
 timeRn = datetime.datetime.now()
@@ -121,14 +121,4 @@ def writeFile(ftpServerName, configUser, dataToWrite):
 
 
 
-
-
-
-
-
-
-
-
-
-
-theUserId = 14
+theUserId = 16
