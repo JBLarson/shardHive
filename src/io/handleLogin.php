@@ -42,8 +42,8 @@
   }
   echo "Connected successfully<br>";
 
-
-  $sql = "INSERT INTO `jTest` (`name`, `pass`, `userId`, `currencyPref`) VALUES ('" . $_GET['name'] . "', '"  . $_GET['pass'] . "', '" . $_GET['userId'] . "', '" . $_GET['currency'] . "')";
+  /**/
+  $sql = "INSERT INTO `jTest` (`name`, `pass`, `userId`, `visitorId`) VALUES ('" . $_GET['name'] . "', '"  . $_GET['pass'] . "', '" . $_GET['userId'] . "', '" . $_COOKIE['visitorId'] . "')";
 
 
   if ($conn->query($sql) === TRUE) {
@@ -52,7 +52,8 @@
       echo 'error ' . $sql . '<br>' . $conn->error;
   }
   /*
-  $sql1 = "SELECT name, userId, currencyPref FROM jTest";
+  
+  $sql1 = "SELECT name, userId, FROM jTest";
   $result = $conn->query($sql1);
   if ($result->num_rows > 0) {
       while($row = $result -> fetch_assoc()) {
@@ -63,7 +64,7 @@
   } else {
       echo "0 results";
   }
-  */
+  
 
 
   $conn->close();
