@@ -1,8 +1,19 @@
 ### shardHive
 
-## Colors
+## old Colors
 dark-blue: #000099;
 light-blue: #D4E1F5;
+
+
+
+
+## new Colors
+dark-blue: #250070;
+pale-light-blue: #D4E1F5;
+pale-dark-blue: #3A4F66;
+loud-royal-blue: #2a2aff;
+mid-dark-gray: #969696;
+
 
 
 
