@@ -2,6 +2,12 @@
 
 
 
+#250070
+#5360ff
+#8992ff
+#c0c4ff
+#f0f2ff
+
 
 
 ## new Colors
