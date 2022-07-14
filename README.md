@@ -1,15 +1,6 @@
 ### shardHive
 
 
-
-#250070
-#5360ff
-#8992ff
-#c0c4ff
-#f0f2ff
-
-
-
 ## new Colors
 dark-blue: #250070;<br>
 pale-light-blue: #D4E1F5;<br>
