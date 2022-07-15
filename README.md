@@ -24,7 +24,5 @@ light-blue: #D4E1F5;
 
 
 
-![http://shardhive.com/wp-content/uploads/2022/07/shardHive-v0.1.1.png](http://shardhive.com/wp-content/uploads/2022/07/shardHive-v0.1.1.png)
-
 
 
