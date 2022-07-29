@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 
 import cryptography
 from cryptography.fernet import Fernet
@@ -21,9 +21,12 @@ def readJson(jsonInAddr):
 
 
 
+global logDecryptedShard
+logDecryptedShard = True
+
 
 ioFile = "gData2.json"
-theUserId = 15
+theUserId = 16
 gData = readJson(ioFile)
 #gData = {"message": "testing shit yo"}
 
@@ -288,24 +291,6 @@ def processCluster(clusterDict):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # sftpRead
 
 def transferFile(ftpServerName, userId):
@@ -434,6 +419,11 @@ def decryptAndDelete(inputNetMap2):
 	for dItems in sortedDd:
 		sortedValue = dItems[1]
 		ddOutput = ddOutput + str(sortedValue)
-	#print(ddOutput)
+	
+
+	if logDecryptedShard == True:
+		print(ddOutput)
+	
+	
 	return ddOutput
 
