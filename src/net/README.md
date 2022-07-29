@@ -1,4 +1,4 @@
-### ETH Private Key Sharding and Distribution System
+### Decentralized Cloud Storage Sharding, Encryption and Distribution Framework
 # Second Stable Build
 
 
