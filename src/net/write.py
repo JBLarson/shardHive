@@ -21,7 +21,7 @@ justTime, justDate = strftime("%X"), strftime("%x")
 print("Started Sharding Algorithm on: " + str(justDate) + " at: " + str(justTime) + "\n")
 
 shardPk = shardAndEncrypt(theUserId, theUserPk)
-
+"""
 try:
 	outputAddr = 'pr/' + str(theUserId) + '/shardMap.json'
 	writeJson(outputAddr, shardPk)
@@ -30,7 +30,7 @@ except Exception as e:
     print(e)
 	#print('\nFailed to write map: ' + str(e))
 
-
+"""
 
 justTime, justDate = strftime("%X"), strftime("%x")
 print("\nFinished Sharding Algorithm on: " + str(justDate) + " at: " + str(justTime))
