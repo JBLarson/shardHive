@@ -9,18 +9,13 @@ loud-royal-blue: #2a2aff;<br>
 mid-dark-gray: #969696;
 
 
-
-
-
-
 ## old Colors
 dark-blue: #000099;
 light-blue: #D4E1F5;
 
 
 
-
-![https://github.com/JBLarson/shardHive/blob/main/shardHive.png](https://github.com/JBLarson/shardHive/blob/main/shardHive.png)
+<img src="https://github.com/JBLarson/shardHive/blob/main/shardHive.png">
 
 
 
