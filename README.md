@@ -1,6 +1,6 @@
 ### shardHive
 
-https://www.youtube.com/playlist?list=PLt-aVSyYkbTeRh2HELkSbwNYbda1cxfv4
+hotelCA covers - https://www.youtube.com/playlist?list=PLt-aVSyYkbTeRh2HELkSbwNYbda1cxfv4
 
 ## new Colors
 dark-blue: #250070;<br>
