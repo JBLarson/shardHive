@@ -1,4 +1,4 @@
-### shardHive
+# shardHive
 
 Formerly private repository for a defunct project.
 
