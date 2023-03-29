@@ -6,15 +6,15 @@ It was an inefficient and convaluted endevaor where I accomplished little, but l
 
 
 <p align="center">
-  <img src="https://github.com/JBLarson/shardHive/blob/main/shardHiveSchematic.png"/>
+  <img src="https://github.com/JBLarson/shardHive/blob/main/graphics/shardHiveSchematic.png"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/JBLarson/shardHive/blob/main/shardHive.png"/>
+  <img src="https://github.com/JBLarson/shardHive/blob/main/graphics/shardHive.png"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/JBLarson/shardHive/blob/main/shardHive-v0.1.1.png"/>
+  <img src="https://github.com/JBLarson/shardHive/blob/main/graphics/shardHive-v0.1.1.png"/>
 </p>
 
 
