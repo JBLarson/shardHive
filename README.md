@@ -1,7 +1,5 @@
 ### shardHive
 
-hotelCA covers - https://www.youtube.com/playlist?list=PLt-aVSyYkbTeRh2HELkSbwNYbda1cxfv4
-
 ## new Colors
 dark-blue: #250070;<br>
 pale-light-blue: #D4E1F5;<br>
@@ -19,7 +17,7 @@ light-blue: #D4E1F5;
 
 
 <p align="center">
-  <img src="https://shardhive.com/wp-content/uploads/2022/07/logo2-e1658041606895.png"/>
+  <img src="https://github.com/JBLarson/shardHive/blob/main/shardHive.png"/>
 </p>
 
 
