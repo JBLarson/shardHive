@@ -1,19 +1,10 @@
 ### shardHive
 
-## new Colors
-dark-blue: #250070;<br>
-pale-light-blue: #D4E1F5;<br>
-pale-dark-blue: #3A4F66;<br>
-loud-royal-blue: #2a2aff;<br>
-mid-dark-gray: #969696;
+Formerly private repository for a defunct project.
 
+shardHive was a decentralized file storage solution that divided files into chunks, encrypted the chunks using a users private key that's stored on a RFID tag, distributed chunks to various raspberry pi file servers, with RFID authentication by a user, the system would retrieve encrypted shards from the testnet of Raspberry Pi's, decrypted the shards, and reassembled the files.
 
-## old Colors
-dark-blue: #000099;
-light-blue: #D4E1F5;
-
-
-
+It was an inefficient and convaluted endevaor where I accomplished little, but learnt a lot.
 
 
 <p align="center">
