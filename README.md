@@ -6,6 +6,10 @@ It was an inefficient and convaluted endevaor where I accomplished little, but l
 
 
 <p align="center">
+  <img src="https://github.com/JBLarson/shardHive/blob/main/shardHiveSchematic.png"/>
+</p>
+
+<p align="center">
   <img src="https://github.com/JBLarson/shardHive/blob/main/shardHive.png"/>
 </p>
 
