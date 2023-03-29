@@ -11,6 +11,9 @@ It was an inefficient and convaluted endevaor where I accomplished little, but l
   <img src="https://github.com/JBLarson/shardHive/blob/main/shardHive.png"/>
 </p>
 
+<p align="center">
+  <img src="https://github.com/JBLarson/shardHive/blob/main/shardHive-v0.1.1.png"/>
+</p>
 
 
 
