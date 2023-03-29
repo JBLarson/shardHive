@@ -10,7 +10,7 @@ pKeys = {"shardHive0": "fc249a644e1db4b248ee95986735b46e46377ddd1918161e8049b68d
 
 
 
-infuraUrl = "https://ropsten.infura.io/v3/8b5812c93ad74ef79e7b9d3420579b0d"
+infuraUrl = "INFURA-API-URL"
 
 
 
